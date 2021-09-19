@@ -18,8 +18,11 @@ jobs:
 
       - name: Deploy staging
         if: github.ref == 'refs/heads/dev'
-        run: echo 'STAGING'
+        run: echo ${{github.ref}}
 
       - name: Deploy production
         if: github.ref == 'refs/heads/main'
-        run: echo 'DEPLOY'
+        run: echo ${{github.ref}}
+
+      - name: Show ref
+        run: echo ${{github.ref}}
