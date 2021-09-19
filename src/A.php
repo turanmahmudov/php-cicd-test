@@ -13,7 +13,7 @@ class A
 
     public function getHello(): string
     {
-        $a = 'test1';
+        $a = 'test2';
         echo $a;
 
         return 'hello';
