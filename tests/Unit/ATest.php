@@ -19,4 +19,11 @@ class ATest extends TestCase
 
         $this->assertEquals('App\A', $a->getName());
     }
+
+    public function testGetName2(): void
+    {
+        $a = new A();
+
+        $this->assertEquals('A', $a->getName());
+    }
 }
