@@ -24,6 +24,6 @@ class ATest extends TestCase
     {
         $a = new A();
 
-        $this->assertEquals('A', $a->getName());
+        $this->assertNotEquals('A', $a->getName());
     }
 }
