@@ -10,4 +10,9 @@ class A
     {
         return __CLASS__;
     }
+
+    public function getHello(): string
+    {
+        return 'hello';
+    }
 }
