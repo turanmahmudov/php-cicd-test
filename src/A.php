@@ -13,6 +13,9 @@ class A
 
     public function getHello(): string
     {
+        $a = 'test';
+        echo $a;
+
         return 'hello';
     }
 }
