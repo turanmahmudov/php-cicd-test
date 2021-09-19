@@ -17,11 +17,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy staging
-        if: github.ref == 'refs/heads/dev'
+        if: github.ref == 'dev'
         run: echo ${{github.ref}}
 
       - name: Deploy production
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'main'
         run: echo ${{github.ref}}
 
       - name: Show ref
