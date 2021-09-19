@@ -24,7 +24,7 @@ jobs:
           coverage: xdebug
 
       - name: Run Composer Install
-      - uses: "ramsey/composer-install@v1"
+        uses: "ramsey/composer-install@v1"
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
