@@ -1,0 +1,25 @@
+name: Deploy
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    env:
+      SOURCE_DIR: "build/"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy staging
+        if: github.ref == 'refs/heads/dev'
+        run: echo 'STAGING'
+
+      - name: Deploy production
+        if: github.ref == 'refs/heads/main'
+        run: echo 'DEPLOY'

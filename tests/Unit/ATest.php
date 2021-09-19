@@ -26,4 +26,11 @@ class ATest extends TestCase
 
         $this->assertNotEquals('A', $a->getName());
     }
+
+    public function testGetHello(): void
+    {
+        $a = new A();
+
+        $this->assertEquals('hello', $a->getHello());
+    }
 }
