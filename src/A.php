@@ -6,9 +6,6 @@ namespace App;
 
 class A
 {
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return __CLASS__;

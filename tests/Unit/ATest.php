@@ -7,9 +7,13 @@ namespace App\Tests\Unit;
 use App\A;
 use App\Tests\TestCase;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class ATest extends TestCase
 {
-    public function testGetName()
+    public function testGetName(): void
     {
         $a = new A();
 
