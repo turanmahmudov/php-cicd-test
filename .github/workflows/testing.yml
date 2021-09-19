@@ -4,13 +4,14 @@ on: [push, pull_request]
 jobs:
   tests:
     name: Tests PHP ${{ matrix.php }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     container:
       image: turanos/php-cicd-test:latest
     continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest]
         php: [7.4]
         experimental: [false]
 
@@ -23,6 +24,8 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           coverage: xdebug
+        env:
+          runner: ubuntu-latest
 
       - name: Run Composer Install
         run: composer install --no-interaction
